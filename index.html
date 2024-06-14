@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDO App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>   <div class="container">
+    <hr><h1>ToDo App by MKA</h1><hr>
+    <div class="inputDiv">
+        <input type="text" id="input" placeholder="Enter task">
+        <button onclick="addInput()">Add</button>
+        <button onclick="doClear()">Clear Checked</button>
+    </div>
+    <div class="panel">
+        <div class="todoDiv">
+            <h3>To-Do List</h3>
+            <ul id="list"></ul>
+        </div>
+        <div class="checkedDiv">
+            <h3>Checked List</h3>
+            <ul id="checkedList"></ul>
+        </div>
+    </div>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
