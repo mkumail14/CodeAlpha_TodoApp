@@ -1,7 +1,7 @@
  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
  import { getFirestore, doc, getDoc, setDoc  ,updateDoc} from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
- const firebaseConfig = {
+ const firebaseConfig1 = {
    apiKey: "AIzaSyC5Y2iQ_xLCCkqMMCyUyVVlCnWZGIx4hmE",
    authDomain: "todo-app-bf0be.firebaseapp.com",
    projectId: "todo-app-bf0be",
@@ -11,8 +11,8 @@
    measurementId: "G-5D6J4FH4LG"
  };
 
- const app = initializeApp(firebaseConfig);
- const db = getFirestore(app);
+ const app1 = initializeApp(firebaseConfig1,"app1");
+ const db = getFirestore(app1);
 
  async function loadDatabaseData(){
     const docRef = doc(db, "allTodoData", `${localStorage.getItem("MKA-Email")}`);
