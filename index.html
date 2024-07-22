@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDO App</title>
+    <title>GroceryMate</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>   
-    <img src="DevlopedByMKA-Logo.png">
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <img src="DevlopedByMKA-Logo.png" style="display: block; margin: 0 10px;">
+        <button class="logoutBtn" onclick="logout()" style="display: block; margin: 0 10px;">Logout</button>
+    </div>
+    
     <div class="container">
-    <hr><h1>ToDo App by MKA</h1><hr>
+    <hr><h1>GroceryMate</h1><hr>
     <div class="inputDiv">
-        <input type="text" id="input" placeholder="Enter task">
+        <input type="text" id="input" placeholder="Enter stuff">
         <button onclick="addInput()">Add</button>
         <button onclick="doClear()">Clear Checked</button>
     </div>
     <div class="panel">
         <div class="todoDiv">
-            <h3>To-Do List</h3>
+            <h3>To Buy</h3>
             <ul id="list"></ul>
         </div>
         <div class="checkedDiv">
-            <h3>Checked List</h3>
+            <h3>Done</h3>
             <ul id="checkedList"></ul>
         </div>
     </div>

@@ -23,12 +23,8 @@
     checked:[]
 }
  if (docSnap.exists()) {
-   console.log("Document data:", docSnap.data().unchecked);
    unchecked=docSnap.data().unchecked;
    checked=docSnap.data().checked
-   console.log(unchecked)
-   console.log(checked)
-
    const listElement = document.getElementById('list');
    const checkedListElement = document.getElementById('checkedList');
 listElement.innerHTML=''
@@ -106,33 +102,24 @@ async function setData(type,value){
             if (inputValue === '') {
                 alert("Enter Data");
             } else {
-               
+                inputElement.value = '';
                 setData("unchecked",inputValue)
                 loadDatabaseData()
-
-                inputElement.value = '';
             }
         }
-// gbt
+
         async function check() {
             const listItem = this;
-            // const checkedListElement = document.getElementById('checkedList');
-            // checkedListElement.appendChild(listItem);
 
-            // const itemIndex = allData.indexOf(listItem.textContent);
             setData("checked",listItem.innerHTML)
             loadDatabaseData()
-
             const docRef = doc(db, "allTodoData", `${localStorage.getItem("MKA-Email")}`);
             const docSnap = await getDoc(docRef);
          let unchecked=[]
-
            unchecked=docSnap.data().unchecked
-
-           const index = unchecked.indexOf(listItem);
+           const index = unchecked.indexOf(listItem.innerText);
            const x = unchecked.splice(index, 1);
         const dataa = doc(db, "allTodoData", `${localStorage.getItem("MKA-Email")}`);
-console.log(unchecked)
         await updateDoc(dataa, {
           unchecked:  unchecked
         });
@@ -146,6 +133,8 @@ console.log(unchecked)
                     });
             loadDatabaseData();
         }
-
+for(let i=0;i<100;i++){
+    setData("unchecked","Helo")
+}
         window.addInput=addInput
         window.doClear=doClear

@@ -6,7 +6,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .container {
@@ -38,7 +37,23 @@ h1 {
     border-radius: 5px;
 }
 
+.logoutBtn{
+    padding: 10px 15px;
+    border: none;
+    background-color: #e70808;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logoutBtn:hover{
+    background-color: #810505;
+}
+
+
 .inputDiv button {
+    height: fit-content;
     padding: 10px 15px;
     border: none;
     background-color: #28a745;
