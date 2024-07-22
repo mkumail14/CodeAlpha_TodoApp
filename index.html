@@ -7,13 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>   
-    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-        <img src="DevlopedByMKA-Logo.png" style="display: block; margin: 0 10px;">
-        <button class="logoutBtn" onclick="logout()" style="display: block; margin: 0 10px;">Logout</button>
-    </div>
-    
-    <div class="container">
-    <hr><h1>GroceryMate</h1><hr>
+     <div class="container">
+        <button id="phoneLogoutBtn" class="logoutBtn" onclick="logout()" style="margin: 0 10px;">Logout</button>
+        <div id="headingContainer">
+    <hr><img style="display: inline; height: 100px;" src="DevlopedByMKA-Logo.png"><h1>GroceryMate</h1><hr>
+</div>
     <div class="inputDiv">
         <input type="text" id="input" placeholder="Enter stuff">
         <button onclick="addInput()">Add</button>
@@ -30,7 +28,7 @@
         </div>
     </div>
 </div>
-    <script type="module" src="authentication.js"></script>
+    <!-- <script type="module" src="authentication.js"></script> -->
     <script type="module" src="app.js"></script>
 </body>
 </html>
