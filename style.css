@@ -94,3 +94,12 @@ li.checked {
     text-decoration: line-through;
     color: #888;
 }
+
+
+
+@media screen and (max-width: 480px) {
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+  }
