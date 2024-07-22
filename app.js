@@ -133,8 +133,6 @@ async function setData(type,value){
                     });
             loadDatabaseData();
         }
-for(let i=0;i<100;i++){
-    setData("unchecked","Helo")
-}
+
         window.addInput=addInput
         window.doClear=doClear
