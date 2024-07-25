@@ -13,8 +13,10 @@
 
  const app1 = initializeApp(firebaseConfig1,"app1");
  const db = getFirestore(app1);
+ document.getElementById('loader').style.width='0%'
 
  async function loadDatabaseData(){
+    loadLoader()
     const docRef = doc(db, "allTodoData", `${localStorage.getItem("MKA-Email")}`);
     const docSnap = await getDoc(docRef);
  let unchecked=[],checked=[]
@@ -96,6 +98,8 @@ async function setData(type,value){
         }
 
         function addInput() {
+   
+
             const inputElement = document.getElementById('input');
             const inputValue = inputElement.value.trim();
 
@@ -132,6 +136,22 @@ async function setData(type,value){
                       checked:  checked
                     });
             loadDatabaseData();
+        }
+
+        function loadLoader(){
+            let i=0
+            setInterval(function(){
+                if(i==0){
+                    document.getElementById('loader').style.width='30%'
+                }else if(i==1){
+                    document.getElementById('loader').style.width='60%'
+                }else if(i==2){
+                    document.getElementById('loader').style.width='100%'
+                }else{
+                    document.getElementById('loader').style.width='0%'
+                }
+                i++
+            },1000)
         }
 
         window.addInput=addInput

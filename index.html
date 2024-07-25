@@ -9,11 +9,13 @@
     <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>   
+  
      <div class="container">
         <button id="phoneLogoutBtn" class="logoutBtn" onclick="logout()" style="margin: 0 10px;">Logout</button>
         <div id="headingContainer">
     <hr><img style="display: inline; height: 100px;" src="DevlopedByMKA-Logo.png"><h1>GroceryMate</h1><hr>
 </div>
+<div id="loader" class="loader"  style="background-color: red; width: 100%; height: 2px; border-radius: 100px;"></div>
     <div class="inputDiv">
         <input type="text" id="input" placeholder="Enter stuff">
         <button onclick="addInput()">Add</button>
@@ -30,7 +32,8 @@
         </div>
     </div>
 </div>
-    <script type="module" src="authentication.js"></script>
+
+    <!-- <script type="module" src="authentication.js"></script> -->
     <script type="module" src="app.js"></script>
     <script> 
         if ('serviceWorker' in navigator) {
