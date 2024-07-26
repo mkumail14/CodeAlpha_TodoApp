@@ -2,14 +2,14 @@
  import { getFirestore, doc, getDoc, setDoc  ,updateDoc} from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
  const firebaseConfig1 = {
-   apiKey: "AIzaSyC5Y2iQ_xLCCkqMMCyUyVVlCnWZGIx4hmE",
-   authDomain: "todo-app-bf0be.firebaseapp.com",
-   projectId: "todo-app-bf0be",
-   storageBucket: "todo-app-bf0be.appspot.com",
-   messagingSenderId: "582200562606",
-   appId: "1:582200562606:web:b4b0d196cd687c3f2a6e3f",
-   measurementId: "G-5D6J4FH4LG"
- };
+    apiKey: "AIzaSyDdPmw7EHBU-AwoDQ1szeW7WtHANaF30Q0",
+    authDomain: "xo-game-c2506.firebaseapp.com",
+    projectId: "xo-game-c2506",
+    storageBucket: "xo-game-c2506.appspot.com",
+    messagingSenderId: "1003496744924",
+    appId: "1:1003496744924:web:34f59f5e9df9d261831119",
+    measurementId: "G-701HCZH6H9"
+  };
 
  const app1 = initializeApp(firebaseConfig1,"app1");
  const db = getFirestore(app1);
