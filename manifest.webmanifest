@@ -1,7 +1,7 @@
                     
 {
-    "name": "GroceryMate Developed by MKA",
-    "short_name": "GroceryMate",
+    "name": "GroceryMate",
+    "short_name": "GroceryMate Developed by MKA",
     "theme_color": "#1976d2",
     "background_color": "#fafafa",
     "display": "standalone",
